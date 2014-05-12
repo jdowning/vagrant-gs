@@ -1,29 +1,30 @@
-# .
+# vagrant-gs
 
-TODO: Write a gem description
+Command-line alias for `vagrant global-status`
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Make sure you have Vagrant 1.6+ and run:
 
-    gem '.'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install .
+```
+vagrant plugin install vagrant-gs
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+Usage: vagrant gs
+```
 
-## Contributing
+## Examples
 
-1. Fork it ( http://github.com/<my-github-username>/./fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+Destroy without confirmation:
+
+```
+$ vagrant gs
+id       name   provider state  directory
+--------------------------------------------------------------------
+There are no active Vagrant environments on this computer! Or,
+you haven't destroyed and recreated Vagrant environments that were
+started with an older version of Vagrant.
+```
